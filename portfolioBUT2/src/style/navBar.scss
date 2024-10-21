@@ -4,9 +4,10 @@
   height: 95px;
   border: solid 1px black;
   box-sizing: border-box;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 40px 10px 20px;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   h1 {
     margin: 0;
@@ -72,7 +73,7 @@
 
 
       div.navLinkAnnimation {
-        transition: transform 0.3s;
+        transition: transform 0.2s;
         transition-delay: 0.15s;
 
         &.down {
@@ -85,6 +86,7 @@
           transform-origin: left;
           transform: scaleX(0);
         }
+
         &.right {
           position: absolute;
           top: -15%;
@@ -95,6 +97,7 @@
           transform-origin: bottom;
           transform: scaleY(0);
         }
+
         &.up {
           position: absolute;
           top: -15%;
@@ -105,6 +108,7 @@
           transform-origin: right;
           transform: scaleX(0);
         }
+
         &.left {
           position: absolute;
           top: -15%;

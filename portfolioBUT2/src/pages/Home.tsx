@@ -1,15 +1,17 @@
 //class de la page home
 import React from "react";
+import Presentation from "../components/home/presentation.tsx";
+import Competences from "../components/home/competences.tsx";
 
 class Home extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Home</h1>
-        <p>Welcome to the Home page</p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className={'homePage'}>
+                <Presentation/>
+                <Competences/>
+            </div>
+        );
+    }
 }
 
 export default Home;
