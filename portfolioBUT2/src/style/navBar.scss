@@ -1,0 +1,121 @@
+.navBarDiv {
+  display: flex;
+  flex-direction: row;
+  height: 95px;
+  border: solid 1px black;
+  box-sizing: border-box;
+  padding: 10px 20px 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+  }
+
+  h2 {
+    text-indent: 100px;
+    margin: 0;
+    padding: 0;
+    color: transparent;
+    font-size: 30px;
+    -webkit-text-stroke: 1px black;
+    transition: 0.2s;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+
+    li {
+      position: relative;
+      padding: 3px;
+
+      &:hover {
+        div.navLinkAnnimation {
+          transition-delay: 0s;
+
+          &.down {
+            transform: scaleX(1);
+          }
+
+          &.right {
+            transform: scaleY(1);
+          }
+
+          &.up {
+            transform: scaleX(1);
+          }
+
+          &.left {
+            transform: scaleY(1);
+          }
+        }
+      }
+
+      a.active + div.navLinkAnnimation {
+        &.down {
+          transform: scaleX(1);
+        }
+      }
+
+
+      div.navLinkAnnimation {
+        transition: transform 0.3s;
+        transition-delay: 0.15s;
+
+        &.down {
+          position: absolute;
+          bottom: -15%;
+          left: -10%;
+          width: 120%;
+          height: 1px;
+          background-color: black;
+          transform-origin: left;
+          transform: scaleX(0);
+        }
+        &.right {
+          position: absolute;
+          top: -15%;
+          left: 110%;
+          width: 1px;
+          height: 130%;
+          background-color: black;
+          transform-origin: bottom;
+          transform: scaleY(0);
+        }
+        &.up {
+          position: absolute;
+          top: -15%;
+          left: -10%;
+          width: 120%;
+          height: 1px;
+          background-color: black;
+          transform-origin: right;
+          transform: scaleX(0);
+        }
+        &.left {
+          position: absolute;
+          top: -15%;
+          left: -10%;
+          width: 1px;
+          height: 100%;
+          background-color: black;
+          transform-origin: top;
+          transform: scaleY(0);
+        }
+      }
+    }
+  }
+}
