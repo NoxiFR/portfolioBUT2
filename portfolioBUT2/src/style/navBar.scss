@@ -44,6 +44,7 @@
       padding: 3px;
 
       &:hover {
+        cursor: url("/src/assets/images/cursors/cursorHover.png") 16 16 , auto;
         div.navLinkAnnimation {
           transition-delay: 0s;
 
